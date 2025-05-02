@@ -46,7 +46,7 @@ const SignIn = () => {
       <div className="w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(${Dress_22})` }}></div>
 
       {/* Right Section: Form */}
-      <div className="w-1/2 flex items-center justify-center bg-white py-8 px-6">
+      <div className="w-1/2 flex items-center justify-center bg-gradient-to-r from-pink-100 via-red-200 to-pink-100 to py-8 px-6">
         <div className="max-w-md w-full space-y-8">
           <h2 className="text-3xl font-semibold text-center text-pink-600">Log In to Your Account</h2>
 
