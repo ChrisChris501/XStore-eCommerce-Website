@@ -1,27 +1,28 @@
 import React from 'react'
-import Dress_20 from './assets/Dress_20.jpg'
-import Dress_2 from './assets/Dress_2.jpeg'
-import Dress_3 from './assets/Dress_3.jpg'
-import Dress_4 from './assets/Dress_4.jpg'
-import Dress_5 from './assets/Dress_5.jpeg'
-import Dress_6 from './assets/Dress_6.jpeg'
-import Dress_7 from './assets/Dress_7.jpg'
-import Dress_8 from './assets/Dress_8.jpeg'
-import Dress_9 from './assets/Dress_9.jpg'
-import Dress_10 from './assets/Dress_10.jpeg'
-import Dress_11 from './assets/Dress_11.jpeg'
-import Dress_12 from './assets/Dress_12.jpg'
-import Dress_13 from './assets/Dress_13.jpeg'
-import Dress_14 from './assets/Dress_14.jpeg'
-import Dress_15 from './assets/Dress_15.jpg'
-import Dress_16 from './assets/Dress_16.jpeg'
+import Dress_1 from '../assets/Dress_1.jpg'
+import Dress_2 from '../assets/Dress_2.jpeg'
+import Dress_3 from '../assets/Dress_3.jpg'
+import Dress_4 from '../assets/Dress_4.jpg'
+import Dress_5 from '../assets/Dress_5.jpeg'
+import Dress_6 from '../assets/Dress_6.jpeg'
+import Dress_7 from '../assets/Dress_7.jpg'
+import Dress_8 from '../assets/Dress_8.jpeg'
+import Dress_9 from '../assets/Dress_9.jpg'
+import Dress_10 from '../assets/Dress_10.jpeg'
+import Dress_11 from '../assets/Dress_11.jpeg'
+import Dress_12 from '../assets/Dress_12.jpg'
+import Dress_13 from '../assets/Dress_13.jpeg'
+import Dress_14 from '../assets/Dress_14.jpeg'
+import Dress_15 from '../assets/Dress_15.jpg'
+import Dress_16 from '../assets/Dress_16.jpeg'
+import Dress_20 from '../assets/Dress_20.jpeg'
 
 
 
-export const data = [
+export const Dress_List = [
     {
         id : 1,
-        image : Dress_20,
+        image : Dress_1,
         title : ' Elegant Long Evening Gown',
         price: 130,
         category: 'ladies',

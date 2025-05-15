@@ -43,7 +43,14 @@ const SignIn = () => {
   return (
     <div className="flex min-h-screen shadow-lg">
       {/* Left Section: Image */}
-      <div className="w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(${Dress_22})` }}></div>
+      <div
+        className="w-1/2 bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${Dress_22})`,
+          backgroundSize: 'contain',
+          imageRendering: 'pixelated', 
+        }}
+></div>
 
       {/* Right Section: Form */}
       <div className="w-1/2 flex items-center justify-center bg-gradient-to-r from-pink-100 via-red-200 to-pink-100 to py-8 px-6">

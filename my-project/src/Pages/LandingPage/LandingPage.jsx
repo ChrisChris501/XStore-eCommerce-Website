@@ -13,7 +13,7 @@
         <section className=" bg-gradient-to-r from-pink-100 via-red-200 to-pink-100">
             <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center px-6 py-12 md:py-24">
             {/* Text content */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 ml-10 justify-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
                 Elevate Your Style with XStore Fashion
                 </h1>
