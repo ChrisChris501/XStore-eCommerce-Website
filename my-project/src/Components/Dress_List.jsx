@@ -15,11 +15,17 @@ import Dress_13 from '../assets/Dress_13.jpeg'
 import Dress_14 from '../assets/Dress_14.jpeg'
 import Dress_15 from '../assets/Dress_15.jpg'
 import Dress_16 from '../assets/Dress_16.jpeg'
+import Dress_17 from '../assets/Dress_17.jpeg'
+import Dress_18 from '../assets/Dress_18.jpeg'
+import Dress_19 from '../assets/Dress_19.jpeg'
 import Dress_20 from '../assets/Dress_20.jpeg'
+import Dress_21 from '../assets/Dress_21.jpeg'
+import Dress_22 from '../assets/Dress_22.jpeg'
+import Dress_23 from '../assets/Dress_23.jpeg'
+import Dress_24 from '../assets/Dress_24.jpeg'
 
 
-
-export const Dress_List = [
+const Dress_List = [
     {
         id : 1,
         image : Dress_1,
@@ -148,4 +154,74 @@ export const Dress_List = [
         category: 'ladies',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
     },
+    {
+        id : 17,
+        image : Dress_17,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+    {
+        id : 18,
+        image : Dress_18,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+    {
+        id : 19,
+        image : Dress_19,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+    {
+        id : 20,
+        image : Dress_20,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+
+    {
+        id : 21,
+        image : Dress_21,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+
+    {
+        id : 22,
+        image : Dress_22,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+
+    {
+        id : 23,
+        image : Dress_23,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
+
+    {
+        id : 24,
+        image : Dress_24,
+        title : ' Elegant Long Evening Gown',
+        price: 130,
+        category: 'ladies',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla eos fuga maiores dolore, cum facere aperiam doloremque praesentium totam expedita quibusdam excepturi necessitatibus autem perspiciatis sunt eligendi minima quam.',
+    },
 ]
+
+export default Dress_List;

@@ -25,9 +25,9 @@ const Navbar = () => {
           >
             Home
           </Link>
-            <a href="#" className="text-pink-100  hover:text-pink-300 text-sm font-medium">
+            <Link to ='ProductList' className="text-pink-100  hover:text-pink-300 text-sm font-medium">
               Products
-            </a>
+            </Link>
             <Link to="/About" className="text-pink-100  hover:text-pink-300 text-sm font-medium">
               About
             </Link>

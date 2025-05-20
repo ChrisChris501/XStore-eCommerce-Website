@@ -1,17 +1,17 @@
 import React, { createContext, useState } from 'react';
 
-export const ShopContext = createContext(null);
+export const ShopContext = createContext();
 
-import { Dress_List } from "../../Components/Dress_List";
+import Dress_List from "../../Components/Dress_List";
 
 const ShopContextProvider = ({ children }) => {
 
     const [products, setProducts] = useState(Dress_List);
 
     return (
-        <ShopContextProvider.Provide value={(products)}>
+        <ShopContext.Provider value={{products}}>
             {children}
-        </ShopContextProvider.Provide>
+        </ShopContext.Provider>
     )
 };
 
