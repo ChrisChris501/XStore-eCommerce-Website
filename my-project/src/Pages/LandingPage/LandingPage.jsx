@@ -16,6 +16,12 @@ import Dress_22 from '../../assets/Dress_22.jpeg'
 import Dress_17 from '../../assets/Dress_17.jpeg'
 import Dress_5 from '../../assets/Dress_5.jpeg'
 import Dress_23 from '../../assets/Dress_23.jpeg'
+import Dress_7 from '../../assets/Dress_7.jpg';
+import Dress_8 from '../../assets/Dress_8.jpeg';
+import Dress_9 from '../../assets/Dress_9.jpg';
+import Dress_10 from '../../assets/Dress_10.jpeg';
+import Dress_11 from '../../assets/Dress_11.jpeg';
+import Dress_12 from '../../assets/Dress_12.jpg';
 
 const LandingPage = () => {
   // State for email subscription
@@ -83,6 +89,15 @@ const LandingPage = () => {
     }
   ];
 
+  const dresses = [
+    Dress_7,
+    Dress_8,
+    Dress_9,
+    Dress_10,
+    Dress_11,
+    Dress_12,
+  ];
+  
   // Handle email subscription
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -159,28 +174,28 @@ const LandingPage = () => {
             
             <div className="flex space-x-4">
               <div className="flex flex-col items-center">
-                <div className="bg-pink-500 text-white text-2xl font-bold w-16 h-16 flex items-center justify-center rounded-lg">
+                <div className="border-2 border-pink-500 text-pink-700 text-xl font-bold w-12 h-12 flex items-center justify-center rounded-lg">
                   {countdown.days}
                 </div>
                 <span className="mt-2 text-sm text-gray-600">Days</span>
               </div>
               
               <div className="flex flex-col items-center">
-                <div className="bg-pink-500 text-white text-2xl font-bold w-16 h-16 flex items-center justify-center rounded-lg">
+                <div className="border-2 border-pink-500 text-pink-700 text-xl font-bold w-12 h-12 flex items-center justify-center rounded-lg">
                   {countdown.hours}
                 </div>
                 <span className="mt-2 text-sm text-gray-600">Hours</span>
               </div>
               
               <div className="flex flex-col items-center">
-                <div className="bg-pink-500 text-white text-2xl font-bold w-16 h-16 flex items-center justify-center rounded-lg">
+                <div className="border-2 border-pink-500 text-pink-700 text-xl font-bold w-12 h-12 flex items-center justify-center rounded-lg">
                   {countdown.minutes}
                 </div>
                 <span className="mt-2 text-sm text-gray-600">Minutes</span>
               </div>
               
               <div className="flex flex-col items-center">
-                <div className="bg-pink-500 text-white text-2xl font-bold w-16 h-16 flex items-center justify-center rounded-lg">
+                <div className="border-2 border-pink-500 text-pink-700 text-xl font-bold w-12 h-12 flex items-center justify-center rounded-lg">
                   {countdown.seconds}
                 </div>
                 <span className="mt-2 text-sm text-gray-600">Seconds</span>
@@ -189,11 +204,11 @@ const LandingPage = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <a
-              href="#"
-              className="inline-block px-6 py-3 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-700 transition"
+          <a
+            href="#"
+            className="inline-block px-6 py-3 bg-pink-700 text-white font-semibold rounded-md hover:bg-pink-700 transition animate-pulse"
             >
-              Shop the Sale
+            Shop the Sale
             </a>
           </div>
         </div>
@@ -311,7 +326,7 @@ const LandingPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
+              <div key={testimonial.id} className="bg-white p-6 rounded-lg border-b-2 border-pink-400">
                 <div className="flex text-yellow-400 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <FaStar key={i} className="w-5 h-5" />
@@ -393,7 +408,7 @@ const LandingPage = () => {
 
       {/* Instagram Feed */}
       <section className="max-w-6xl mx-auto px-6 py-16 border-t">
-        <h2 className="text-3xl font-bold text-gray-800 mb-3 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-3 text-center border-t-2 pt-4 border-pink-300">
           #XStoreStyle
         </h2>
         <p className="text-gray-600 mb-12 text-center max-w-2xl mx-auto">
@@ -401,20 +416,19 @@ const LandingPage = () => {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="aspect-square overflow-hidden relative group">
-              <img
-                src={item % 3 === 0 ? Dress_22 : item % 2 === 0 ? Dress_5 : Dress_23}
-                alt={`Instagram Post ${item}`}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-pink-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                <FaInstagram className="text-white text-3xl" />
-              </div>
+        {dresses.map((dress, index) => (
+          <div key={index} className="aspect-square overflow-hidden relative group">
+            <img
+              src={dress}
+              alt={`Instagram Post ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-pink-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <FaInstagram className="text-white text-3xl" />
             </div>
-          ))}
-        </div>
-        
+          </div>
+        ))}
+      </div>
         <div className="mt-8 text-center">
           <a
             href="#"
