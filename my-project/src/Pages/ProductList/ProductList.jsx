@@ -25,7 +25,7 @@ const ProductList = () => {
               <img
                 src={image}
                 alt={title}
-                className="w-full h-[70%] object-cover"
+                className="w-full h-[65%] object-cover"
               />
 
               <div className="p-4">

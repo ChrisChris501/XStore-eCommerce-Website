@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +28,7 @@ const Navbar = () => {
           >
             Home
           </Link>
-            <Link to ='ProductList' className="text-pink-100  hover:text-pink-300 text-sm font-medium">
+            <Link to ='/ProductList' className="text-pink-100  hover:text-pink-300 text-sm font-medium">
               Products
             </Link>
             <Link to="/About" className="text-pink-100  hover:text-pink-300 text-sm font-medium">
@@ -37,7 +40,11 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Auth Links */}
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-6">
+          <Link to="/cart" className="text-pink-100 hover:text-pink-300 text-sm font-medium">
+          <FontAwesomeIcon icon={faShoppingCart} className="h-5 w-5" />
+          </Link>
+
             <Link
               to="/SignIn"
               className="text-pink-100  hover:text-pink-300 text-sm font-medium"
@@ -109,20 +116,23 @@ const Navbar = () => {
               Contact
             </a>
             {/* Divider */}
-            <div className="border-t border-pink-200 pt-4 "></div>
-          
-            <a
-              href="#"
-              className="block text-pink-100 hover:text-pink-300 text-sm font-medium"
+            <div className="block border-t border-pink-200 pt-4"></div>
+            <Link to="/cart" className="block text-pink-100 hover:text-pink-300 text-sm font-medium">
+              <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
+            </Link>
+
+            <Link
+              to="/SignIn"
+              className="block text-pink-100  hover:text-pink-300 text-sm font-medium"
             >
               Sign In
-            </a>
-            <a
-              href="#"
-              className="block px-4 pb-4 text-pink-100 rounded-md text-sm font-medium text-center hover:text-pink-300"
+            </Link>
+            <Link
+              to="/SignUp"
+              className="block text-pink-100 rounded-md text-sm font-medium hover:text-pink-300 hover:border-pink-300 pb-2"
             >
               Sign Up
-            </a>
+            </Link>
           </div>
         )}
       </div>

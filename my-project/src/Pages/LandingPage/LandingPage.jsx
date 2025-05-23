@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { 
   FaTshirt, 
   FaCrown, 
@@ -131,7 +132,7 @@ const LandingPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-pink-100 via-red-200 to-pink-100">
+      <section className="bg-gradient-to-r from-pink-200 via-red-100 to-pink-100">
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center px-6 py-12 md:py-24">
           {/* Text content */}
           <div className="w-full md:w-1/2 ml-10 justify-center">
@@ -141,12 +142,11 @@ const LandingPage = () => {
             <p className="text-gray-700 mb-6 text-lg">
               Discover the latest trends in women's fashion — from stunning dresses to elegant gowns. Shine with every step.
             </p>
-            <a
-              href="#"
+            <Link to ="/ProductList"
               className="inline-block px-6 py-3 bg-pink-600 text-white text-lg rounded-md hover:bg-pink-700 transition"
             >
               Shop Now
-            </a>
+            </Link>
           </div>
 
           {/* Hero image */}
@@ -204,12 +204,11 @@ const LandingPage = () => {
           </div>
           
           <div className="mt-8 text-center">
-          <a
-            href="#"
+          <Link to ="/ProductList"
             className="inline-block px-6 py-3 bg-pink-700 text-white font-semibold rounded-md hover:bg-pink-700 transition animate-pulse"
             >
             Shop the Sale
-            </a>
+            </Link>
           </div>
         </div>
       </section>
