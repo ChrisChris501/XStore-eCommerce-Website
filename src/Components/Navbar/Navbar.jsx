@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +40,7 @@ const Navbar = () => {
 
           {/* Desktop Auth Links */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-          <Link to="/cart" className="text-pink-100 hover:text-pink-300 text-sm font-medium">
+          <Link to="/Cart" className="text-pink-100 hover:text-pink-300 text-sm font-medium">
           <FontAwesomeIcon icon={faShoppingCart} className="h-5 w-5" />
           </Link>
 
