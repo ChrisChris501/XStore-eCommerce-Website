@@ -7,17 +7,12 @@ import Dress_List from "../../Components/Dress_List";
 const ShopContextProvider = ({ children }) => {
 
     const [products, setProducts] = useState(Dress_List);
-
-
 // Cart State
-
-const [cart, setCart] = useState({});
-
+    const [cart, setCart] = useState([]);
 // The amount State
-const [itemAmount, setAmount] = useState(0)
-
+    const [itemAmount, setAmount] = useState(0)
 // Total Price state
-const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(0);
 
 //Get total amount
 
@@ -35,9 +30,14 @@ const [total, setTotal] = useState(0);
         setTotal(total);
         }, [cart]);
 
+        //add to cart
+    const addToCart = (product) => {
+        const newItem = {...product, amount: 1};
+        console.log(newItem)
+}
 
     return (
-        <ShopContext.Provider value={{products, total}}>
+        <ShopContext.Provider value={{products, total, addToCart}}>
             {children}
         </ShopContext.Provider>
     )

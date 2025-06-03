@@ -9,6 +9,6 @@ createRoot(document.getElementById('root')).render(
   <ShopContextProvider>
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
   </ShopContextProvider>
 )

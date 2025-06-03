@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../../Components/ShopContext/ShopContext'
 
 const ProductList = () => {
-  const { products } = useContext(ShopContext)
+  const { products, addToCart } = useContext(ShopContext)
 
   return (
     <div className="py-10 px-4 md:px-10 bg-orange-50 min-h-screen">
@@ -32,7 +32,8 @@ const ProductList = () => {
                 <h4 className="text-lg font-semibold text-orange-800">{title}</h4>
                 <p className="text-gray-600 mt-1 mb-4">${price}</p>
 
-                <button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-xl transition">
+                <button onClick={ ()=> addToCart(product, id)
+                } className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-xl transition">
                   Add to Cart
                 </button>
               </div>
