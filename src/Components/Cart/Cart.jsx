@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {UseContext} from 'react'
 import { FaTrash } from "react-icons/fa";
 import CartDetails from './CartDetails';
+import { ShopContext } from '../../Components/ShopContext/ShopContext';
+
 
 const Cart = () => {
+  const {cart, clearCart, total, itemAmount} = useContext(ShopContext)
   return (
     <div>
       <div>
@@ -12,8 +15,8 @@ const Cart = () => {
           {/*Cart_Header*/}
           <div>
             <h1>Shopping Cart</h1>
-            <h1>Items: (0)</h1>
-            <FaTrash className ="" />
+            <h1>Items: ({itemAmount})</h1>
+            <FaTrash onClick = {clearCart} className ="" />
           </div>
           {/*Cart_Header*/}
           <div>

@@ -10,7 +10,7 @@ const ShopContextProvider = ({ children }) => {
 // Cart State
     const [cart, setCart] = useState([]);
 // The amount State
-    const [itemAmount, setAmount] = useState(0)
+    const [itemAmount, setItemAmount] = useState(0)
 // Total Price state
     const [total, setTotal] = useState(0);
 
@@ -31,13 +31,78 @@ const ShopContextProvider = ({ children }) => {
         }, [cart]);
 
         //add to cart
-    const addToCart = (product) => {
+    const addToCart = (product, id) => {
         const newItem = {...product, amount: 1};
-        console.log(newItem)
+
+        //Check if item is already in Cart
+    const cartItem = cart.find ((item) => {
+        return item.id === id;
+    })
+
+    if (cartItem) {
+        const newCart = [...cart].map((item) => {
+            if(item.id === id){
+                return {...item, amount : cartItem.amount +1};
+            } else {
+                return item;
+            }
+        });
+        setCart(newCart);
+    } else {
+        setCart([...cart, newItem])
+    }
 }
 
+//Update item Amount
+
+    useEffect(() => {
+        if (cart) {
+            const amount = cart.reduce((accumulator, currentItem) => {
+                return accumulator + currentItem.amount;
+            }, 0);
+            setItemAmount(amount);
+        }
+    }, [cart])
+
+
+    //remove an item from cart
+    const removeFromCart = (id) => {
+        const newCart = cart.filter((item) => {
+            return item.id !== id;
+        });
+        setCart(newCart)
+    }
+
+    //clear cart
+    const clearCart = () => {
+        setCart([]);
+    }
+
+    //Increase the qantity 0f an item
+    const increaseAmount = (id) => {
+        const cartItem = cart.find((item) => item.id ===id);
+        addToCart(cartItem, id)
+    }
+
+    const decreaseAmount = (id) => {
+        const cartItem = cart.find((item)=> item.id === id );
+
+        if(cartItem) {
+            const newCart = cart.map((item) => {
+                if (item.id === id) {
+                    return {...item, amount: cartItem.amount -1};
+                } else {
+                    return item;
+                }
+            });
+            setCart(newCart)
+
+        }
+    };
+        
+
     return (
-        <ShopContext.Provider value={{products, total, addToCart}}>
+        <ShopContext.Provider value={{products, total, addToCart, cart, removeFromCart, clearCart, increaseAmount, decreaseAmount, itemAmount}}>
             {children}
         </ShopContext.Provider>
     )

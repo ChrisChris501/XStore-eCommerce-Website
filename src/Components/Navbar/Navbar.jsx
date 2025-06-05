@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { ShopContext } from '../../Components/ShopContext/ShopContext';
 
 const Navbar = () => {
+  const {itemAmount} = useContext(ShopContext)
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -40,9 +43,12 @@ const Navbar = () => {
 
           {/* Desktop Auth Links */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-          <Link to="/Cart" className="text-pink-100 hover:text-pink-300 text-sm font-medium">
-          <FontAwesomeIcon icon={faShoppingCart} className="h-5 w-5" />
-          </Link>
+          <Link to="/Cart" className="relative text-pink-100 hover:text-pink-300 text-sm font-medium">
+            <FontAwesomeIcon icon={faShoppingCart} className="h-5 w-5" />
+            <p className="absolute -top-2 -right-2 h-5 w-5 text-xs text-white bg-red-400 rounded-full flex items-center justify-center">
+              {itemAmount}
+            </p>
+            </Link>
 
             <Link
               to="/SignIn"
@@ -116,8 +122,11 @@ const Navbar = () => {
             </a>
             {/* Divider */}
             <div className="block border-t border-pink-200 pt-4"></div>
-            <Link to="/cart" className="block text-pink-100 hover:text-pink-300 text-sm font-medium">
-              <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
+            <Link to="/Cart" className="relative text-pink-100 hover:text-pink-300 text-sm font-medium">
+            <FontAwesomeIcon icon={faShoppingCart} className="h-5 w-5" />
+            <p className="absolute -top-2 -right-2 h-5 w-5 text-xs text-white bg-red-400 rounded-full flex items-center justify-center">
+              {itemAmount}
+            </p>
             </Link>
 
             <Link
