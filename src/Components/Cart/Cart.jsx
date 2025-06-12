@@ -1,4 +1,4 @@
-import React, {UseContext} from 'react'
+import React, {useContext} from 'react'
 import { FaTrash } from "react-icons/fa";
 import CartDetails from './CartDetails';
 import { ShopContext } from '../../Components/ShopContext/ShopContext';
@@ -25,8 +25,15 @@ const Cart = () => {
             <span>Price</span>
             <span>Total</span>
           </div>
-          <div>
-            <CartDetails />
+          <div>       
+            {cart.length > 0 ? (
+              cart.map((item) => (
+                <CartDetails item={item} key={item.id}/>
+              ))
+            ) : (
+              <p>Your cart  is empty</p>
+            )
+            }
           </div>
         </div>
         {/*Cart_Right */}
@@ -34,11 +41,11 @@ const Cart = () => {
           <h2>Cart Summary</h2>
           <div>
             <span>Items</span>
-            <span>0</span>
+            <span>{itemAmount}</span>
           </div>
           <div>
             <span>Subtotal</span>
-            <span>0</span>
+            <span>${isNaN(total) ? 0: total}</span>
           </div>
           <div>
             <span>Shipping</span>
