@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import LandingPage from './Pages/LandingPage/LandingPage';
@@ -12,12 +12,11 @@ import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
-    <Router basename="/XStore-eCommerce-Website">
+
+    <BrowserRouter>
       <div className="App">
         <Navbar />
         <Routes>
-          <Route index element={<LandingPage />} />
-          <Route path="/LandingPage" element={<LandingPage />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/SignIn" element={<SignIn />} />
@@ -28,7 +27,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
